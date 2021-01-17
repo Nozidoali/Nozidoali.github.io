@@ -24,30 +24,44 @@
             </div>
         </nav>
 
+    <script>
+        function OpenPDF(filename) {
+            window.open('./documents/'+filename,'','')
+        }
+    </script>
+
   </head>
   <body style="font-family:Verdana, Geneva, Tahoma, sans-serif; margin-top: 100px;">
 
     <div style="width: 60%; margin: auto;">
         <!-- Publication Box -->
         <div style="margin: auto; background-color:rgb(245, 245, 255); ">
-            <h4>
+            <h2>
             Publications 
-            </h4>        
+            </h2>        
+
         </div>
 
         <!-- Presentation Box -->
         <div style="margin: auto; background-color:rgb(245, 255, 245); ">
-            <h4>
+            <h2>
             Presentations
-            </h4>       
+            </h2>       
             
         </div>
 
         <!-- Report Box -->
         <div style="margin: auto; background-color:rgb(255, 255, 245); ">
-            <h4>
+            <h2>
             Reports 
-            </h4>        
+            </h2>
+                <li>
+                    A Hardware Architecture of Reconfigurable Decision Tree Model
+                    <button type="button" class="btn btn-default btn-xs" onclick="OpenPDF('reconfig.pdf');">
+                        Load
+                    </button>
+                </li>
+
         </div>
     </div>
 
