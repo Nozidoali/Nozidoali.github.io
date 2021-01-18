@@ -15,7 +15,7 @@
             background-color: #101010;
             }
         .link-dark {
-            color: #6930C3;
+            color: #FFFFFF;
         }
         .link-light {
             color: #30475E;
@@ -43,10 +43,10 @@
                 element.setAttribute("class", "body-light");
 
             var element = document.getElementById("nav");
-            if (element.style.backgroundColor == "rgb(221, 221, 221)")
-                element.style.backgroundColor = "rgb(37, 37, 37)";
+            if (element.style.backgroundColor == "rgb(255, 255, 255)")
+                element.style.backgroundColor = "#101010";
             else
-                element.style.backgroundColor = "rgb(221, 221, 221)";
+                element.style.backgroundColor = "rgb(255, 255, 255)";
 
 
             var links = document.getElementsByTagName("a");
@@ -86,10 +86,10 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Header -->
-        <nav class="navbar navbar-default navbar-static-top" role="navigation" id="nav" style="background-color: rgb(221,221,221);" onclick="themeChange()">
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" id="nav" style="width: 60%; margin: auto; background-color: rgb(255,255,255);" onclick="themeChange()">
             <div style="width: 50%; margin: auto;">
                 <!-- My Photo -->
-                <div style="width:100px; height:100px; overflow:hidden; position: relative; padding-left: 15px; margin: auto; ">
+                <div style="width:100px; border-radius: 100px; overflow:hidden; position: relative; padding-left: 15px; margin: auto; ">
                     <img src="images/why_bio.jpg", height="100px", width="75px">
                 </div>
 
