@@ -2,60 +2,131 @@
 <html>
   <head>
     <meta charset="utf-8">
+
+    <style type="text/css">
+        .body-light { 
+            font-family:Verdana, Geneva, Tahoma, sans-serif; 
+            margin-top: 100px; 
+            background-color: #DDDDDD;
+            }
+        .body-dark { 
+            font-family:Verdana, Geneva, Tahoma, sans-serif; 
+            margin-top: 100px; 
+            background-color: #101010;
+            }
+        .link-dark {
+            color: #6930C3;
+        }
+        .link-light {
+            color: #30475E;
+        }
+        .background-light {
+            background-color: #DDDDDD;
+        }
+        .background-dark {
+            background-color: #252525;
+        }
+        .text-dark {
+            color: #64DFDF;
+        }
+        .text-light {
+            color: #222831;
+        }
+    </style>
+    <script>
+        function themeChange() {
+
+            var element = document.getElementById("body");
+            if (element.getAttribute("class") == "body-light")
+                element.setAttribute("class", "body-dark");
+            else
+                element.setAttribute("class", "body-light");
+
+            var element = document.getElementById("nav");
+            if (element.style.backgroundColor == "rgb(221, 221, 221)")
+                element.style.backgroundColor = "rgb(37, 37, 37)";
+            else
+                element.style.backgroundColor = "rgb(221, 221, 221)";
+
+
+            var links = document.getElementsByTagName("a");
+            for (var i=0; i<links.length;i++) {
+                var link = links[i];
+                if (link.getAttribute("class") == "link-light")
+                    link.setAttribute("class", "link-dark");
+                else
+                    link.setAttribute("class", "link-light");
+            }
+
+            var elements = document.getElementsByTagName("div");
+            for (var i=0; i<elements.length;i++) {
+                var element = elements[i];
+                if (element.getAttribute("class") == "background-light")
+                    element.setAttribute("class", "background-dark");
+                else if (element.getAttribute("class") == "background-dark")
+                    element.setAttribute("class", "background-light");
+            }
+
+            var elements = document.getElementsByTagName("p");
+            for (var i=0; i<elements.length;i++) {
+                var element = elements[i];
+                if (element.getAttribute("class") == "text-light")
+                    element.setAttribute("class", "text-dark");
+                else if (element.getAttribute("class") == "text-dark")
+                    element.setAttribute("class", "text-light");
+            }
+
+        }
+
+    </script>
+
     <title>Homepage</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Header -->
-        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="background-color: white;">
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" id="nav" style="background-color: rgb(221,221,221);" onclick="themeChange()">
             <div style="width: 50%; margin: auto;">
-
                 <!-- My Photo -->
-                <div style="width:100px; height:100px; border-radius:100%; overflow:hidden; position: relative; padding-left: 15px; margin: auto; ">
+                <div style="width:100px; height:100px; overflow:hidden; position: relative; padding-left: 15px; margin: auto; ">
                     <img src="images/why_bio.jpg", height="100px", width="75px">
                 </div>
+
                 <!-- My Name -->
                 <div style="margin: auto; text-align: center;">
-                    <a href="./documents/CV.pdf" style="color:slategrey;">
+                    <a href="./documents/CV.pdf" class="link-light">
                         <h1>WANG Hanyu</h1>
                     </a>
                 </div>
             </div>
         </nav>
 
-    <script>
-        function OpenPDF(filename) {
-            window.open('./documents/'+filename,'','')
-        }
-    </script>
-
   </head>
-  <body style="font-family:Verdana, Geneva, Tahoma, sans-serif; margin-top: 100px;">
+  <body id="body" class="body-light">
 
     <div style="width: 60%; margin: auto;">
 
 
-
         <!-- Publication Box -->
-        <div style="margin: auto; background-color:rgb(245, 245, 255); ">
+        <div style="margin: auto;" class="background-light">
             <h3>
-            Publications 
+                <p class="text-light"> Publications</p>
             </h3>        
         </div>
 
         <!-- Presentation Box -->
-        <div style="margin: auto; background-color:rgb(245, 255, 245); ">
+        <div style="margin: auto;" class="background-light">
             <h3>
-            Presentations
+                <p class="text-light">  Presentations</p>
             </h3>       
             
         </div>
 
         <!-- Report Box -->
-        <div style="margin: auto; background-color:rgb(255, 255, 245); ">
+        <div style="margin: auto;" class="background-light">
             <h3>
-            Studies 
+                <p class="text-light"> Studies</p> 
             </h3>
         </div>
     </div>
