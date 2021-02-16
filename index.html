@@ -1,135 +1,37 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
+    <head>
+        <meta charset="utf-8">
+        <meta name="Keywords" content="Hanyu Wang, WHY, Wang Hanyu" >
+        <meta name="Description" content="Personal Webpage of Wang Hanyu">
 
-    <style type="text/css">
-        .body-light { 
-            font-family:Verdana, Geneva, Tahoma, sans-serif; 
-            margin-top: 100px; 
-            background-color: #EDEDED;
-            }
-        .body-dark { 
-            font-family:Verdana, Geneva, Tahoma, sans-serif; 
-            margin-top: 100px; 
-            background-color: #101010;
-            }
-        .link-dark {
-            color: #FFFFFF;
-        }
-        .link-light {
-            color: #30475E;
-        }
-        .background-light {
-            background-color: #DDDDDD;
-        }
-        .background-dark {
-            background-color: #252525;
-        }
-        .text-dark {
-            color: #64DFDF;
-        }
-        .text-light {
-            color: #222831;
-        }
-    </style>
-    <script>
-        function themeChange() {
+        <title>Homepage</title>
+        <link rel="stylesheet" type="text/css" href="css/homepage.css">
+    </head>
 
-            var element = document.getElementById("body");
-            if (element.getAttribute("class") == "body-light")
-                element.setAttribute("class", "body-dark");
-            else
-                element.setAttribute("class", "body-light");
-
-            var element = document.getElementById("nav");
-            if (element.style.backgroundColor == "rgb(255, 255, 255)")
-                element.style.backgroundColor = "#101010";
-            else
-                element.style.backgroundColor = "rgb(255, 255, 255)";
-
-
-            var links = document.getElementsByTagName("a");
-            for (var i=0; i<links.length;i++) {
-                var link = links[i];
-                if (link.getAttribute("class") == "link-light")
-                    link.setAttribute("class", "link-dark");
-                else
-                    link.setAttribute("class", "link-light");
-            }
-
-            var elements = document.getElementsByTagName("div");
-            for (var i=0; i<elements.length;i++) {
-                var element = elements[i];
-                if (element.getAttribute("class") == "background-light")
-                    element.setAttribute("class", "background-dark");
-                else if (element.getAttribute("class") == "background-dark")
-                    element.setAttribute("class", "background-light");
-            }
-
-            var elements = document.getElementsByTagName("p");
-            for (var i=0; i<elements.length;i++) {
-                var element = elements[i];
-                if (element.getAttribute("class") == "text-light")
-                    element.setAttribute("class", "text-dark");
-                else if (element.getAttribute("class") == "text-dark")
-                    element.setAttribute("class", "text-light");
-            }
-
-        }
-
-    </script>
-
-    <title>Homepage</title>
-
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-        <!-- Header -->
-        <nav class="navbar navbar-default navbar-static-top" role="navigation" id="nav" style="width: 60%; margin: auto; background-color: rgb(255,255,255);" onclick="themeChange()">
-            <div style="width: 50%; margin: auto;">
-                <!-- My Photo -->
-                <div style="width:100px; border-radius: 100px; overflow:hidden; position: relative; padding-left: 15px; margin: auto; ">
-                    <img src="images/why_bio.jpg", height="100px", width="75px">
-                </div>
-
-                <!-- My Name -->
-                <div style="margin: auto; text-align: center;">
-                    <a href="./documents/CV.pdf" class="link-light">
-                        <h1>WANG Hanyu</h1>
-                    </a>
-                </div>
+    <body>
+        <div id='name'>
+            <p>Wang Hanyu <a href="documents/CV.pdf">CV</a></p>
+        </div>
+        <div id='content'>
+            <div id='publication'>
+                <p>Publication</p>
+                <ul>
+                    <li></li>
+                </ul>
             </div>
-        </nav>
-
-  </head>
-  <body id="body" class="body-light">
-
-    <div style="width: 60%; margin: auto;">
-
-
-        <!-- Publication Box -->
-        <div style="margin: auto;" class="background-light">
-            <h3>
-                <p class="text-light"> Publications</p>
-            </h3>        
+            <div id='presentation'>
+                <p>Presentation</p>
+                <ul>
+                    <li></li>
+                </ul>
+            </div>
+            <div id='studies'>
+                <p>Studies</p>
+                <ul>
+                    <li></li>
+                </ul>
+            </div>
         </div>
-
-        <!-- Presentation Box -->
-        <div style="margin: auto;" class="background-light">
-            <h3>
-                <p class="text-light">  Presentations</p>
-            </h3>       
-            
-        </div>
-
-        <!-- Report Box -->
-        <div style="margin: auto;" class="background-light">
-            <h3>
-                <p class="text-light"> Studies</p> 
-            </h3>
-        </div>
-    </div>
-
-  </body>
+    </body>
 </html>
