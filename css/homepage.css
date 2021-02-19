@@ -5,14 +5,18 @@
 body {
     width: 900px;
     margin: auto;
+    background-color: #f4f4f2;
+    color: #495464;
+}
+body h {
+    font-size: 36px;
 }
 #name > p {
     font-size: 40px;
     text-align: center;
 }
 #tags {
-    padding: 50px 0px 50px 0px;
-    display: inline;
+    padding: 30px;
 }
 #tags > a {
     margin-right: 20px;
@@ -24,22 +28,32 @@ body {
     height: 60px;
     margin-right: 30px;
 }
-#content {
-    font-size: 20px;
-}    
-#content > div {
-    border: 2px solid #495464;
-    border-radius: 10px;
-    margin: 10px;
-    width: 30%;
+#nav {
+    padding: 30px;
+    width: 100%;
+}
+#nav a {
+    width: 33%;
+    height: 35px;
     float: left;
-    overflow: hidden;
-}
-#content > div > p {
     text-align: center;
+    font-size: 18px;
+    border: 1px solid #DBDEE1;
+    border-radius: 5px;
 }
-.background{
-    background-color: #f4f4f2;
-    color: #495464;
+#nav a:hover {
+    background-color: #FFFFFF;
 }
-
+#display {
+    width: 100%;
+    border: 1px solid #DBDEE1;
+    margin: 20px;
+}
+#display div {
+    display: none;
+}
+#display p {
+    text-align: center;
+    font-size: 18px;
+    color: #EB5E0B;
+}
