@@ -1,5 +1,5 @@
 $(function(){
-    $("#nav a").click(function(){
-        $("#display div").eq($("#nav a").index(this)).show().siblings("#display div").hide();
+    $("#nav div").click(function(){
+        $("#display div").eq($("#nav div").index(this)).show().siblings("#display div").hide();
     });
 });

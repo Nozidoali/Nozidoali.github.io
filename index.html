@@ -7,11 +7,17 @@
 
         <title>Y</title>
         <link rel="stylesheet" type="text/css" href="css/homepage.css">
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script src="js/nav.js" type="text/javascript"></script>
+
     </head>
 
     <body>
+        <canvas class="fireworks" style="position:fixed;left:0;top:0;z-index:99999999;pointer-events:none;"> </canvas>
+        <script type='text/javascript' src="js/anime.min.js"></script>
+        <script type='text/javascript' src="js/fireworks.js"></script>
         <div id='name'>
-            <p><img src="images/logo.png" id='logo'>Wang Hanyu [<a href="documents/CV.pdf">CV</a>]</p>
+            <p><img src="images/logo.png" id='logo'>Hanyu Wang [<a href="documents/CV.pdf">CV</a>]</p>
         </div>
         <h>Tags:</h>
         <div id='tags'>
@@ -21,25 +27,81 @@
         </div>
         <h>Catagories:</h>
         <div id='nav'>
-            <a href="#">Publications</a>
-            <a href="#">Presentations</a>
-            <a href="#">Projects</a>
+            <div>Publications</div>
+            <div>Presentations</div>
+            <div>Projects</div>
         </div>
         <div id='display'>
-            <div>
+            <div id='Publications'>
                 <p>Publications</p>
                 <ul>
-                    <li>Logic Synthesis Meets Machine Learning:Trading Exactness for Generalization</li>
+                    <li>
+                        <article> Distilling Arbitration Logic from Traces using Machine Learning: A Case Study on NoC (DAC 2021)<br></article>
+                        <year>2021.02<br></year>
+                        <author>Yuan Zhou, <b>Hanyu Wang</b>, Jieming Yin, Zhiru Zhang</author>
+                    </li>
+                    <li>
+                        <article>Logic Synthesis Meets Machine Learning: Trading Exactness for Generalization (DATE 2020)<br></article>
+                        <year>2020.12<br></year>
+                        <author>Shubham Rai, Walter Lau Neto, Yukio Miyasaka, Xinpei Zhang, Mingfei Yu, Qingyang Yi Masahiro Fujita, Guilherme B. Manske, Matheus F. Pontes, Leomar S. da Rosa Junior, Marilton S. de Aguiar, Paulo F. Butzen, Po-Chun Chien, Yu-Shan Huang, Hoa-Ren Wang, Jie-Hong R. Jiang, Jiaqi Gu, Zheng Zhao, Zixuan Jiang, David Z. Pan, Brunno A. de Abreu, Isac de Souza Campos, Augusto Berndt, Cristina Meinhardt, Jonata T. Carvalho, Mateus Grellert, Sergio Bampi, Aditya Lohana, Akash Kumar, Wei Zeng, Azadeh Davoodi, Rasit O. Topaloglu, Yuan Zhou, Jordan Dotzel, Yichi Zhang, <b>Hanyu Wang</b>, Zhiru Zhang, Valerio Tenace, Pierre-Emmanuel Gaillardon, Alan Mishchenko, Satrajit Chatterjee</author>
+                    </li>
                 </ul>
             </div>
             <div>
                 <p>Presentations</p>
+                <ul>
+                    <li>
+                        <article>A Light-weight Reconfigurable Hardware Implementation of Decision Tree Model<br></article>
+                        <year>2021.01<br></year>
+                        <author><b>Hanyu Wang</b>, Yuan Zhou, Zhiru Zhang</author>
+                    </li>
+                </ul>
             </div>
             <div>
                 <p>Projects</p>
+                <ul>
+                    <li>
+                        <project>LOVE: Logic Optimization Visualized Engine<br></project>
+                        <year>2020.12<br></year>
+                        <description>
+                            My Bachelor's Thesis at University of Michigan - Shanghai Jiao Tong University Joint Institute<br>
+                            <a href="https://github.com/Nozidoali/LOVE-Logic-Optimization-Visualized-Engine">
+                                <img src="images/git.png" alt=""> Github
+                            </a>
+                        </description>
+                    </li>
+                    <li>
+                        <project>CBFC: Compressed Blow Fish Cryptosystem<br></project>
+                        <year>2020.07<br></year>
+                        <description>
+                            <a href="https://github.com/Nozidoali/CBFC-Compressed-Blow-Fish-Cryptosystem">
+                                <img src="images/git.png" alt=""> Github
+                            </a>
+                        </description>
+                    </li>
+                    <li>
+                        <project>CAESC: Compressed Advanced Encryption Standard Cryptosystem<br></project>
+                        <year>2020.07<br></year>
+                        <description>
+                            <a href="https://github.com/Nozidoali/CAESC-Compressed-Advanced-Encryption-Standard-Cryptosystem">
+                                <img src="images/git.png" alt=""> Github
+                            </a>
+                        </description>
+                    </li>
+                    <li>
+                        <project>Attention-based Global Router<br></project>
+                        <year>2020.04<br></year>
+                        <description>
+                            Won the 1st place in Global Router Contest 2020 at University of Wisconsin Madison. <br>
+                            <a href="https://github.com/Nozidoali/Attention-based-Global-Router">
+                                <img src="images/git.png" alt=""> Github
+                            </a>
+                        </description>
+                    </li>
+                    
+                </ul>
             </div>
         </div>
-        <script type="text/javascript" src="js/jquery.min.js"></script>
-        <script src="js/nav.js" type="text/javascript"></script>
+
     </body>
 </html>
