@@ -1,0 +1,11 @@
+[data-md-color-scheme="youtube"] {
+    --md-primary-fg-color:        #ff4400;
+  }
+
+[data-md-color-scheme="blue"] {
+    --md-primary-fg-color:        #0044ff;
+  }
+
+[data-md-color-scheme="slate"] {
+    --md-hue: 210; /* [0, 360] */
+  }
