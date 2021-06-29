@@ -1,11 +1,10 @@
 site_name: Y 
-site_url: https://example.com/
 
 theme:
   name: material
   font:
-    text: Special Elite
-    code: DejaVu Sans Mono
+    text: JetBrains Mono
+    code: JetBrains Mono
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: youtube
@@ -29,14 +28,22 @@ theme:
 
 plugins:
   - search
+  - mermaid2
 
 markdown_extensions:
+  - pymdownx.details
+  - pymdownx.progressbar
+  - pymdownx.smartsymbols
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.highlight:
       use_pygments: false
   - pymdownx.tabbed
   - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid
   - attr_list
   - def_list
   - pymdownx.tasklist:
@@ -52,6 +59,7 @@ extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js
+  - https://unpkg.com/mermaid/dist/mermaid.min.js
 extra_css:
   - stylesheets/extra.css
   - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css
