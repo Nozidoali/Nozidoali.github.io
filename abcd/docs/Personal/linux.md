@@ -5,6 +5,19 @@ In this year, I tried to deploy my linux OS on ubuntu 20.04 LTS. Below is the pr
 !!! note "Advantage of Ubuntu 20.04 LTS"
     Comparing to 18.04 LTS:
 
+## Install Linux:
+![drivers](https://blog.csdn.net/qq_23996069/article/details/112862244)
+Some hardward will raise problem while 
+```
+sudo add-apt-repository ppa:graphics-drivers/ppa
+sudo apt-get update
+sudo ubuntu-drivers devices
+```
+Then we select the recommanded GPU driver version
+```
+sudo apt-get install nvidia-driver-460 nvidia-settings nvidia-prime
+```
+
 ## Step 0: Install `ssh` and `sshd`:
 By default, you should have `ssh` already in the environment. To install `sshd`, the server, run:
 ```
