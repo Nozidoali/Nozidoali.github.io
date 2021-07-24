@@ -1,0 +1,871 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.2.1, mkdocs-material-7.1.8" name="generator"/>
+<title>Distrubuted System Overview - Y</title>
+<link href="../assets/stylesheets/main.ca7ac06f.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.f1a3b89f.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=JetBrains+Mono:300,400,400i,700%7CJetBrains+Mono&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"JetBrains Mono";--md-code-font-family:"JetBrains Mono"}</style>
+<link href="../stylesheets/extra.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="" data-md-color-scheme="youtube" dir="ltr">
+<script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+<script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#distrubuted-system-overview">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Y" class="md-header__button md-logo" data-md-component="logo" href="../index.html" title="Y">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Y
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Distrubuted System Overview
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="" data-md-color-scheme="youtube" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2m10-3a5 5 0 0 1 5 5 5 5 0 0 1-5 5H7a5 5 0 0 1-5-5 5 5 0 0 1 5-5h10M7 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3h10a3 3 0 0 0 3-3 3 3 0 0 0-3-3H7z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="" data-md-color-scheme="blue" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"></path></svg>
+</label>
+</form>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../index.html">
+      About
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="index.html">
+        Big Data
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../Logic_Synthesis/index.html">
+        Logic Synthesis
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../Personal/linux.html">
+        Personal
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Y" class="md-nav__button md-logo" data-md-component="logo" href="../index.html" title="Y">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"></path></svg>
+</a>
+    Y
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../index.html">
+        About
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+        Big Data
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Big Data" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Big Data
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Distrubuted System Overview
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="index.html">
+        Distrubuted System Overview
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#topic-1-new-issues-for-big-data">
+    Topic 1: New issues for Big data
+  </a>
+<nav aria-label="Topic 1: New issues for Big data" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hdfs-datanode-failure">
+    HDFS: datanode failure
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hdfs-network-failure">
+    HDFS: network failure
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hdfs-data-failure">
+    HDFS: Data failure
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#topic-2-hadoop-cluster-setup-what-is-inside-hadoop-drill-and-spark">
+    Topic 2: Hadoop cluster setup, what is inside Hadoop, Drill and Spark
+  </a>
+<nav aria-label="Topic 2: Hadoop cluster setup, what is inside Hadoop, Drill and Spark" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-1-start-drill-on-the-client-machine">
+    Step 1: Start Drill on the client machine
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-2-upload-resources-to-the-fs-and-request-resources-for-the-application-master">
+    Step 2: Upload resources to the FS and request resources for the application master
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-3-ask-a-node-manager-to-prepare-and-start-a-container-for-the-application-master">
+    Step 3: Ask a node manager to prepare and start a container for the application master
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-4-the-application-master-contacts-the-resource-manager-to-obtain-more-containers">
+    Step 4: The application master contacts the resource manager to obtain more containers
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-5-request-the-start-of-drill-software-on-each-assigned-node">
+    Step 5: Request the start of Drill software on each assigned node
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-6-start-a-drill-process-called-a-drillbit">
+    Step 6: Start a "Drill process" called a drillbit
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-7-each-drillbit-starts-and-registers-with-zookeeper">
+    Step 7: Each drillbit starts and registers with Zookeeper
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-8-the-application-master-checks-the-health-of-each-drillbit-through-zookeeper">
+    Step 8: The application master checks the health of each drillbit through Zookeeper
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-9-use-zookeeper-to-retrieve-information-on-the-drillbits-run-queries-etc">
+    Step 9: Use Zookeeper to retrieve information on the drillbits, run queries, etc.
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#about-rdd">
+    About RDD
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#run-spark">
+    Run spark
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#spark-running-mode">
+    Spark running mode:
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#why-is-spark-fast">
+    Why is Spark fast
+  </a>
+<nav aria-label="Why is Spark fast" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#transformation">
+    Transformation
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#narrow-transformations">
+    Narrow Transformations
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#wide-transforamtions">
+    wide transforamtions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#action">
+    Action
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-state="indeterminate" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+        Logic Synthesis
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Logic Synthesis" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Logic Synthesis
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Logic_Synthesis/index.html">
+        About
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Logic_Synthesis/boolean.html">
+        Introduction of Boolean Algebra
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-state="indeterminate" data-md-toggle="__nav_3_3" id="__nav_3_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_3">
+        ABC
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="ABC" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_3">
+<span class="md-nav__icon md-icon"></span>
+          ABC
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Logic_Synthesis/ABC/ABC_Commands.html">
+        ABC Commands
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-state="indeterminate" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+        Personal
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Personal" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Personal
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Personal/linux.html">
+        My Linux Configurations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Personal/research_summary.html">
+        Logic Synthesis Research Summary
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#topic-1-new-issues-for-big-data">
+    Topic 1: New issues for Big data
+  </a>
+<nav aria-label="Topic 1: New issues for Big data" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hdfs-datanode-failure">
+    HDFS: datanode failure
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hdfs-network-failure">
+    HDFS: network failure
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hdfs-data-failure">
+    HDFS: Data failure
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#topic-2-hadoop-cluster-setup-what-is-inside-hadoop-drill-and-spark">
+    Topic 2: Hadoop cluster setup, what is inside Hadoop, Drill and Spark
+  </a>
+<nav aria-label="Topic 2: Hadoop cluster setup, what is inside Hadoop, Drill and Spark" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-1-start-drill-on-the-client-machine">
+    Step 1: Start Drill on the client machine
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-2-upload-resources-to-the-fs-and-request-resources-for-the-application-master">
+    Step 2: Upload resources to the FS and request resources for the application master
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-3-ask-a-node-manager-to-prepare-and-start-a-container-for-the-application-master">
+    Step 3: Ask a node manager to prepare and start a container for the application master
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-4-the-application-master-contacts-the-resource-manager-to-obtain-more-containers">
+    Step 4: The application master contacts the resource manager to obtain more containers
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-5-request-the-start-of-drill-software-on-each-assigned-node">
+    Step 5: Request the start of Drill software on each assigned node
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-6-start-a-drill-process-called-a-drillbit">
+    Step 6: Start a "Drill process" called a drillbit
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-7-each-drillbit-starts-and-registers-with-zookeeper">
+    Step 7: Each drillbit starts and registers with Zookeeper
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-8-the-application-master-checks-the-health-of-each-drillbit-through-zookeeper">
+    Step 8: The application master checks the health of each drillbit through Zookeeper
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-9-use-zookeeper-to-retrieve-information-on-the-drillbits-run-queries-etc">
+    Step 9: Use Zookeeper to retrieve information on the drillbits, run queries, etc.
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#about-rdd">
+    About RDD
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#run-spark">
+    Run spark
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#spark-running-mode">
+    Spark running mode:
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#why-is-spark-fast">
+    Why is Spark fast
+  </a>
+<nav aria-label="Why is Spark fast" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#transformation">
+    Transformation
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#narrow-transformations">
+    Narrow Transformations
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#wide-transforamtions">
+    wide transforamtions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#action">
+    Action
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="distrubuted-system-overview">Distrubuted System Overview</h1>
+<p>Course side:
+1. Understand the new issues appearing as datasets grow<br/>
+2. Be able to setup a Hadoop cluster and use it<br/>
+3. Understand why traditional algorithms fail on big data<br/>
+4. Be able to implement advanced algorithms for big data  </p>
+<p>Personnal side:
+1. Derive algorithms for big data
+2. Use and work “inside” Hadoop, Drill, and Spark
+3. Relate known strategies to new problems
+4. Perform extra research</p>
+<h2 id="topic-1-new-issues-for-big-data">Topic 1: New issues for Big data</h2>
+<div class="admonition note">
+<p class="admonition-title">Big Data Issues</p>
+<p>(1) increase throughput: caching, branch prediction, RAID<br/>
+(2) size of data size: &gt;1T (old definition)   </p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Hadoop/Drill/Spark/...</p>
+<p>Goal: efficiently analyse massive amount of data<br/>
+Hadoop: <strong>batch job</strong>, latency not important, write on disk<br/>
+Drill: <strong>real-time</strong> job, sql friendly<br/>
+Spark: <strong>real-time</strong> job, good analytics  </p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Zookeeper</p>
+<p>Configuration Management &amp; Coordination Service.<br/>
+- Dependent of Drill.<br/>
+- No large data-store, allow different nodes in cluster to communicate;<br/>
+- let various applications of hadoop to work together.<br/>
+Node communication (like dbus)<br/>
+Leader/Follower/Observer  </p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">YARN</p>
+<p>"Yet Another Resource Negotiator"<br/>
+Resource Manager (whole system)<br/>
+Node Manager (container)<br/>
+Application Manager (application)  </p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">YARN: 3 working options</p>
+<p>3 ways of using YARN:<br/>
+1. One application per user job (MapReduce)<br/>
+2. One application per user session (Spark)<br/>
+3. Long-running application shared among users (Drill)  </p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">YARN scheduler</p>
+<p>3 scheduler mode<br/>
+1. FIFO: good for batch<br/>
+2. Capacity: waster resource<br/>
+3. Fair: delay due to the resource reallocation  </p>
+<div class="admonition success">
+<p class="admonition-title">Example</p>
+<p>Total: 100 CPU, 10 TB<br/>
+- A: 2 CPU, 300 GB - (2%, 3%) - 3%<br/>
+- B: 6 CPU, 200 GB - (6%, 1%) - 6%<br/>
+if A have 10 containers, B will have 5 containers.  </p>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">YARN: workflow</p>
+<ol>
+<li>client request Resource manager (return assigned id)  </li>
+<li>request a Node to run Application Master (assigned by Resource Manager-&gt;Node Manager, return id)  </li>
+<li>Application Master register itself to Resource Manager (later it can apply for resource)  </li>
+<li>Application Master request containers from the Resource Manager  </li>
+<li>Application Master inform the Node Manager to do the initialization  </li>
+<li>Application Master monitor the Running status of all the Node Managers  </li>
+<li>Application Master send heartbeat to the client, report the process  </li>
+<li>Application Manager undo the register on Resource Manager, Resource Manager shut down the Application Master and stop the tasks, free all the Node Manager.  </li>
+</ol>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Hadoop: MapReduce</p>
+<ol>
+<li>fetch file information  </li>
+<li>client submit job to YARN  </li>
+<li>YARN calculate the resource, and start the MapTasks  </li>
+<li>Read data with gradually increased offset value  </li>
+<li>YARN starts Map Task (create a Map Tasks for each split)  </li>
+<li>Ring Buffer (&gt;80%)  </li>
+<li>Shuffle (quick sort)  </li>
+<li>Shuffle (merge sort)  </li>
+<li>Local Reducer  </li>
+<li>YARN starts Reduce Task (depends on Map Tasks number)  </li>
+<li>YARN fetch data to memory (+disk)  </li>
+<li>Reduce, output Key Value pair  </li>
+<li>Write back to hdfs  </li>
+</ol>
+</div>
+<div class="admonition note">
+<p class="admonition-title">HDFS: merge small files</p>
+<p>why?<br/>
+1. the memory of namenode: meta data<br/>
+2. the latency of fetching too many small files <br/>
+3. timecost of starting too many tasks<br/>
+solutions:<br/>
+1. Hadoop archive (HAR): A MapReduce Task<br/>
+2. SequenceFile / TextFile (Filecrush/Avro): serialize <code>&lt;key, value&gt;</code> pair where key is the filename and value is the file content.
+3. CombineFileInputFormat  </p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">HDFS: Failure Tolarence</p>
+<h4 id="hdfs-datanode-failure">HDFS: datanode failure</h4>
+<p>datanode send heartbeat to namenode every 3 sec</p>
+<h4 id="hdfs-network-failure">HDFS: network failure</h4>
+<p>datanode does not respond the request</p>
+<h4 id="hdfs-data-failure">HDFS: Data failure</h4>
+<p>checksum, data lost if network is unstable, read from other data node</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">HDFS: general</p>
+<ul>
+<li>Block Size is 128MB by default</li>
+<li>Task Size is 128MB by default </li>
+<li>Pro: high throughput</li>
+<li>Con: large latency</li>
+<li>Inputformat: (1) split big files to blocks (2) merge small files</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Container</p>
+<p>A container is an environment with restricted resources where application-specific processes are run.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">JAVA</p>
+<p>JVM:<br/>
+JAVA: cross-platform<br/>
+- Default MapReduce Format: LongWritable, TEXT.<br/>
+<pre class="highlight"><code class="language-java">public class MyMapper extends Mapper&lt;LongWritable, Text, Text, IntWritable&gt;{
+    @Override
+    public void map (LongWritable key, Text value, Context context) throws IOException, InterruptedException {
+        String[] data = value.toString().split(",");
+        Text id = new Text(data[1]);
+        IntWritable grade = new IntWritable(Integer.parseInt(data[2]));
+        context.write(id, grade);
+    }
+}</code></pre></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">maven</p>
+<pre class="highlight"><code>mvn package
+mvn compile</code></pre>
+</div>
+<div class="admonition note">
+<p class="admonition-title">OS</p>
+<p>namespace: security. hierarchical management of processes isolation</p>
+</div>
+<h2 id="topic-2-hadoop-cluster-setup-what-is-inside-hadoop-drill-and-spark">Topic 2: Hadoop cluster setup, what is inside Hadoop, Drill and Spark</h2>
+<div class="admonition note">
+<p class="admonition-title">MapReduce Spill</p>
+<p>spill happens when the memory is not enough. It will write the data to the disk. For MapReduce1.0, spilling will happen at least once because the output of the Mapper will be written to the disk.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">speed up a MapReduce Job</p>
+<ol>
+<li>Provide shuffle with as much memory as possible  </li>
+<li>Keep enough memory for map and reduce functions  </li>
+<li>Optimize the code with respect to memory consumption  </li>
+<li>Minimize the number of spills for the map part.  </li>
+<li>Keep intermediate reduce data in memory  </li>
+</ol>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Drill</p>
+<p>Parties optionally involved in a Drill job:<br/>
+1. YARN<br/>
+2. HDFS<br/>
+3. Hive<br/>
+4. HBase<br/>
+- Drill-on-Yarn: Running Drill as a YARN application<br/>
+- Drillbit: A Drill Process<br/>
+- Foreman  </p>
+<h4 id="step-1-start-drill-on-the-client-machine">Step 1: Start Drill on the client machine</h4>
+<pre class="highlight"><code>drill-on-yarn.sh --site $DRILL_SITE [start/stop/status]</code></pre>
+<h4 id="step-2-upload-resources-to-the-fs-and-request-resources-for-the-application-master">Step 2: Upload resources to the FS and request resources for the application master</h4>
+<p>Since we are running drill as a YARN application, we have to upload all the jars.<br/>
+<pre class="highlight"><code>drill.yarn: drill-install: client-path: "/opt/drill_master/drill.tar.gz"
+drill.yarn: dfs: app-dir: "/user/drill"</code></pre></p>
+<h4 id="step-3-ask-a-node-manager-to-prepare-and-start-a-container-for-the-application-master">Step 3: Ask a node manager to prepare and start a container for the application master</h4>
+<pre class="highlight"><code>drill.yarn: http: port: 8048 # the admin web service</code></pre>
+<h4 id="step-4-the-application-master-contacts-the-resource-manager-to-obtain-more-containers">Step 4: The application master contacts the resource manager to obtain more containers</h4>
+<pre class="highlight"><code>drill.yarn: cluster: count: 3 # Drill-on-YARN runs each on a seperate hosts</code></pre>
+<h4 id="step-5-request-the-start-of-drill-software-on-each-assigned-node">Step 5: Request the start of Drill software on each assigned node</h4>
+<p>Drill will have a drill-master, where the application master is.</p>
+<h4 id="step-6-start-a-drill-process-called-a-drillbit">Step 6: Start a "Drill process" called a drillbit</h4>
+<p>Drillbit is a process, drill is an application, handles queries
+<pre class="highlight"><code></code></pre></p>
+<h4 id="step-7-each-drillbit-starts-and-registers-with-zookeeper">Step 7: Each drillbit starts and registers with Zookeeper</h4>
+<pre class="highlight"><code>drill.exec: zk.connect: "59.78.36.36:2181,59.78.35.67:2181,59.78.36.88:2181" # list of zookeeper hosts</code></pre>
+<h4 id="step-8-the-application-master-checks-the-health-of-each-drillbit-through-zookeeper">Step 8: The application master checks the health of each drillbit through Zookeeper</h4>
+<p>Each datanode should configure the zk (align with drillbit)
+<pre class="highlight"><code>tickTime=2000
+dataDir=/opt/zookeeper/data
+clientPort=2181
+initLimit=5
+syncLimit=2
+server.3=59.78.36.36:2888:3888
+server.2=59.78.36.88:2888:3888
+server.1=59.78.35.67:2888:3888</code></pre></p>
+<h4 id="step-9-use-zookeeper-to-retrieve-information-on-the-drillbits-run-queries-etc">Step 9: Use Zookeeper to retrieve information on the drillbits, run queries, etc.</h4>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Drillbit</p>
+<p>Foreman drillbit: the drillbit that receives the query (each drillbit has a service deployed at port 8048 and 8047, which can receive queries from the user.) <br/>
+<strong>Foreman drillbit</strong> is responsible for driving the whole query: from SQL, logical plan, Optimizer, Physical Plan, Execution, Storage(if update)<br/>
+Each drillbit contains all services and capabilities of Drill<br/>
+Columnar execution<br/>
+Optimistic query execution： (1) assume queries will success (2) re-run failed queries (3) never store intermediate results (only if memory is run out of) <br/>
+Vectorization<br/>
+Runtime Compilation  </p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Drill Fragmentation</p>
+<p>The physical plan is an <strong>execution tree</strong> with multiple fragments (JSON format).<br/>
+Major fragments:<br/>
+Minor fragments:<br/>
+- Root Minor fragments: run the foreman<br/>
+- Intermediate Minor fragments: pass aggregated results to the root fragment<br/>
+- Leaf Minor fragments: parallel data fetching  </p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Spark</p>
+<h4 id="about-rdd">About RDD</h4>
+<p>RDD: Resilient Distributed Dataset<br/>
+(1) Read-only (2) Partitioned<br/>
+fork and join optimization<br/>
+Spark DAG Scheduler<br/>
+- Resilient: reconstruct the RDD based on partition loss  </p>
+<h4 id="run-spark">Run spark</h4>
+<p>we only need to set the spark variables
+<pre class="highlight"><code>export YARN_CONF_DIR=$HADOOP_HOME/etc/hadoop
+export SPARK_HOME="/usr/local/spark"
+export PATH=$PATH:$SPARK_HOME/bin
+export LD_LIBRARY_PATH=${HADOOP_HOME}/lib/native
+export SPARK_DIST_CLASSPATH=$(hadoop classpath)</code></pre></p>
+<h3 id="spark-running-mode">Spark running mode:</h3>
+<ol>
+<li>client mode: the process is running on the master (for interactive)  </li>
+<li>cluster mode: the process is running as a YARN application (fully utilize hadoop)  </li>
+</ol>
+<h3 id="why-is-spark-fast">Why is Spark fast</h3>
+<ol>
+<li>Distributed collections of object that can be cached in memory  </li>
+<li>Manipulated through various parallel operations  </li>
+<li>Automatically rebuild on failure  </li>
+</ol>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Spark RDD optimization</p>
+<h4 id="transformation">Transformation</h4>
+<p>Using lazy evaluation (not executed until it sees an action, reorganize and optimize the process "fork and join"). avoid returning large datasets.  </p>
+<h4 id="narrow-transformations">Narrow Transformations</h4>
+<ul>
+<li><code>rdd.map(lambda x:x+1)</code> </li>
+<li><code>rdd.filter()</code> </li>
+<li><code>rdd.flatmap()</code> </li>
+</ul>
+<h4 id="wide-transforamtions">wide transforamtions</h4>
+<ul>
+<li><code>rdd.join()</code> </li>
+<li><code>rdd.cartesian()</code> </li>
+<li><code>rdd.groupbykey()</code> </li>
+<li><code>rdd.reducebykey()</code><br/>
+<pre class="highlight"><code class="language-python">import pyspark.sql as sql
+spark = sql.session.SparkSession.builder.master("yarn").appName("test").getOrCreate()
+grade_rdd = spark.read.text("hdfs://hadoop-master:9000/user/hadoop/" + str(row_count) + ".csv").rdd
+grade_pairs = grade_rdd.flatMap(lambda row: [tuple(row.value.split(",")[1:3])])
+max_grade = grade_pairs.reduceByKey(lambda x, y: max([x, y]))
+max_grade.collect()</code></pre></li>
+</ul>
+<h4 id="action">Action</h4>
+<p><code>rdd.collect()</code></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">LXC</p>
+<p>Linux Container</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Docker</p>
+<p>based on LXC</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Kubernetes</p>
+<p>organize small cluster of containers</p>
+<div class="admonition success">
+<p class="admonition-title">when to use what?</p>
+<p>~5GB: powerful personal computer<br/>
+~100GB: Kubernetes<br/>
+~1PB: hadoop  </p>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">LVM</p>
+<p>Logical Volumn Manager: manage filesysten disk partition</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">RPC</p>
+<p>Remote Procedure Call: contact Name Node</p>
+</div>
+</article>
+</div>
+</div>
+<a class="md-top md-icon" data-md-component="top" data-md-state="hidden" href="#" title="Back to top">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path></svg>
+</a>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: About" class="md-footer__link md-footer__link--prev" href="../index.html" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Previous
+              </span>
+              About
+            </div>
+</div>
+</a>
+<a aria-label="Next: About" class="md-footer__link md-footer__link--next" href="../Logic_Synthesis/index.html" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Next
+              </span>
+              About
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs
+        </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+<script src="../assets/javascripts/bundle.76f349be.min.js"></script>
+<script src="../javascripts/config.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</body>
+</html>
