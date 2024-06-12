@@ -87,6 +87,10 @@ body h {
     font-size: 20px;
     color: #11698e;
 }
+.display highlight {
+    color: #771643;
+    font-style: italic;
+}
 .display year, id {
     color: #EB5E0B;
 }
