@@ -1,0 +1,25 @@
+# Default: allow everything
+User-agent: *
+Disallow:
+
+# Google Search / Google Scholar
+User-agent: Googlebot
+Disallow:
+
+# OpenAI search index (powers ChatGPT Search citations)
+User-agent: OAI-SearchBot
+Allow: /
+
+# OpenAI model training crawler
+User-agent: GPTBot
+Allow: /
+
+# Anthropic (Claude)
+User-agent: ClaudeBot
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://nozidoali.github.io/sitemap.xml
