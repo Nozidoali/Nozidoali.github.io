@@ -13,6 +13,7 @@ profile:
     <p>Engineering VI</p>
     <p>University of California, Los Angeles</p>
     <p>Los Angeles, CA, USA</p>
+    <p><a href="mailto:hanyuwang@g.ucla.edu">hanyuwang@g.ucla.edu</a></p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
