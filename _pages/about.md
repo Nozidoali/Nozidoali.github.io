@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: PhD student, Computer Science, <a href='https://www.ucla.edu/'>UCLA</a>.
 
