@@ -7,6 +7,6 @@ category: research
 related_publications: true
 ---
 
-Preparing an arbitrary quantum state is a fundamental subroutine in quantum computing, and the qubit/gate cost of the preparation circuit is often the bottleneck. This line of work formulates state preparation as an exact synthesis problem {% cite wang2024cnot %} and further reduces circuit cost by exploiting don't cares in the target state {% cite wang2024dontcares %}.
+Preparing an arbitrary quantum state is a fundamental subroutine in quantum computing, and the qubit/gate cost of the preparation circuit is often the bottleneck. This line of work formulates state preparation as an exact synthesis problem {% cite wang2024cnot %}, reduces circuit cost by exploiting don't cares in the target state {% cite wang2024dontcares %}, and estimates fault-tolerant logical resources for compiled state preparation {% cite liu2026logicalresource %}.
 
 The algorithms are implemented in [quantum-xyz](https://github.com/Nozidoali/quantum-xyz) (Python) and re-engineered in [exact-xyz](https://github.com/Nozidoali/exact-xyz) (C++) for performance.

@@ -18,6 +18,8 @@ Contact: hanyuwang@g.ucla.edu
 
 ## Selected publications
 
+- Quantum Circuit Synthesis Using an Exact T Library. DAC 2026. arXiv:2605.15476
+- Logical Resource Estimation for Quantum State Preparation with Compilation. arXiv:2605.18877 (2026)
 - LLM-DSE: Searching Accelerator Parameters with LLM Agents. arXiv:2505.12188 (2025)
 - Quantum State Preparation Circuit Optimization Exploiting Don't Cares. ICCAD 2024
 - Quantum State Preparation Using an Exact CNOT Synthesis Formulation. DATE 2024. arXiv:2401.01009
