@@ -2,6 +2,7 @@
 layout: about
 title: About
 permalink: /
+description: Hanyu Wang is a PhD student in Computer Science at UCLA advised by Prof. Jason Cong. He works on electronic design automation, quantum circuit synthesis, logic synthesis, and LLM agents for hardware design.
 subtitle: PhD student, Computer Science, <a href='https://www.ucla.edu/'>UCLA</a>.
 
 profile:

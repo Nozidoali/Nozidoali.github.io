@@ -1,0 +1,33 @@
+---
+permalink: /llms.txt
+---
+# Hanyu Wang
+
+> Hanyu Wang (GitHub: Nozidoali) is a PhD student in Computer Science at UCLA, advised by Prof. Jason Cong in the VAST research group. He works on mathematical optimization problems in electronic design automation (EDA): quantum circuit synthesis and compilation, logic synthesis, high-level synthesis (HLS), and LLM agents for hardware design-space exploration.
+
+Background: MSc in Electrical Engineering and Information Technology from ETH Zurich (DYNAMO group, Prof. Lana Josipović; research at EPFL Integrated Systems Laboratory with Prof. Giovanni De Micheli); BEng from the UM-SJTU Joint Institute, Shanghai Jiao Tong University (logic synthesis with Prof. Weikang Qian).
+
+Contact: hanyuwang@g.ucla.edu
+
+## Pages
+
+- [About](https://nozidoali.github.io/): bio and selected publications
+- [Publications](https://nozidoali.github.io/publications/): full publication list with BibTeX
+- [Projects](https://nozidoali.github.io/projects/): research and course projects
+- [CV](https://nozidoali.github.io/cv/): full curriculum vitae ([PDF](https://nozidoali.github.io/assets/pdf/cv.pdf))
+
+## Selected publications
+
+- LLM-DSE: Searching Accelerator Parameters with LLM Agents. arXiv:2505.12188 (2025)
+- Quantum State Preparation Circuit Optimization Exploiting Don't Cares. ICCAD 2024
+- Quantum State Preparation Using an Exact CNOT Synthesis Formulation. DATE 2024. arXiv:2401.01009
+- MapBuf: Simultaneous Technology Mapping and Buffer Insertion for HLS Performance Optimization. ICCAD 2023 (Best Paper Award nominee)
+- Distilling Arbitration Logic from Traces using Machine Learning. DAC 2021 (Best Paper Award nominee)
+
+## Open-source projects
+
+- MiniFlash: fast Clifford+T to lattice-surgery compiler — https://github.com/Nozidoali/MiniFlash
+- quantum-xyz / exact-xyz: quantum state preparation synthesis — https://github.com/Nozidoali/quantum-xyz
+- LLM-DSE: LLM agents for accelerator design-space exploration — https://github.com/Nozidoali/LLM-DSE
+- MapBuf: technology mapping + buffer insertion in Dynamatic HLS — https://github.com/Nozidoali/MapBuf
+- Cost-generic resubstitution in mockturtle (EPFL logic synthesis library)
