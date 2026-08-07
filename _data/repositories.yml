@@ -4,5 +4,12 @@ github_users:
 repo_description_lines_max: 2
 
 github_repos:
-  - Nozidoali/Attention-based-Global-Router
+  - Nozidoali/LLM-DSE
+  - Nozidoali/MiniFlash
+  - Nozidoali/MapBuf
+  - Nozidoali/exact-t-map
+  - Nozidoali/quantum-xyz
+  - Nozidoali/exact-xyz
+  - Nozidoali/leap-frontend
+  - UCLA-VAST/multilevel-sabre
   - lsils/mockturtle
