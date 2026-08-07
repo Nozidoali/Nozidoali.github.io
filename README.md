@@ -16,7 +16,8 @@ Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds the site
 ## Content map
 
 - `_pages/about.md` — home page bio
-- `_bibliography/papers.bib` — publications (rendered by jekyll-scholar)
+- `assets/bib/papers.bib` — publications (rendered by jekyll-scholar; also served raw at /assets/bib/papers.bib)
+- `_publications/` — per-paper detail pages with Google Scholar citation meta (linked from bib entries via the `page` field)
 - `_news/` — news items shown on the home page
 - `_projects/` — project cards
 - `_data/cv.yml` + `assets/pdf/cv.pdf` — CV page and PDF download

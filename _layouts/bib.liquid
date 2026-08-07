@@ -63,6 +63,31 @@
 
   <!-- Entry bib key -->
   <div id="{{ entry.key }}" class="{% if site.enable_publication_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}">
+    <!-- Machine-readable metadata for this entry -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ScholarlyArticle",
+        "name": {{ entry.title | strip_newlines | jsonify }},
+        "author": [
+          {%- for author in entry.author_array -%}
+            {"@type": "Person", "name": {{ author.first | append: " " | append: author.last | jsonify }}}{% unless forloop.last %},{% endunless %}
+          {%- endfor -%}
+        ],
+        "datePublished": "{{ entry.year }}"
+        {%- if entry.booktitle -%},
+          "isPartOf": {{ entry.booktitle | strip_newlines | jsonify }}
+        {%- elsif entry.journal -%},
+          "isPartOf": {{ entry.journal | strip_newlines | jsonify }}
+        {%- endif -%}
+        {%- if entry.html -%},
+          "url": {{ entry.html | jsonify }}
+        {%- endif -%}
+        {%- if entry.arxiv -%},
+          "sameAs": "https://arxiv.org/abs/{{ entry.arxiv }}"
+        {%- endif -%}
+      }
+    </script>
     <!-- Title (links to entry.html when available) -->
     {% if entry.html %}
       <div class="title"><a href="{{ entry.html }}">{{ entry.title }}</a></div>
@@ -209,6 +234,9 @@
 
     <!-- Links/Buttons -->
     <div class="links">
+      {% if entry.page %}
+        <a href="{{ entry.page | relative_url }}" class="btn btn-sm z-depth-0" role="button" aria-label="Project page for {{ entry.title }}">Page</a>
+      {% endif %}
       {% if entry.award %}
         <a class="award btn btn-sm z-depth-0" role="button">
           {%- if entry.award_name %}{{ entry.award_name }}{% else %}Awarded{% endif -%}

@@ -185,6 +185,9 @@ collections:
     output: true
   projects:
     output: true
+  publications:
+    output: true
+    permalink: /publications/:name/
   teachings:
     output: true
 
@@ -337,7 +340,7 @@ scholar:
   style: apa
   locale: en
 
-  source: /_bibliography/
+  source: /assets/bib/
   bibliography: papers.bib
   bibliography_template: bib
   # Note: if you have latex math in your bibtex, the latex filter
@@ -383,6 +386,7 @@ filtered_bibtex_keywords:
     hal,
     html,
     inspirehep_id,
+    page,
     pdf,
     pmid,
     poster,

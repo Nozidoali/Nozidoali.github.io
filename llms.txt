@@ -7,14 +7,19 @@ permalink: /llms.txt
 
 Background: MSc in Electrical Engineering and Information Technology from ETH Zurich (DYNAMO group, Prof. Lana Josipović; research at EPFL Integrated Systems Laboratory with Prof. Giovanni De Micheli); BEng from the UM-SJTU Joint Institute, Shanghai Jiao Tong University (logic synthesis with Prof. Weikang Qian).
 
-Contact: hanyuwang@g.ucla.edu
+Contact: hanyuwang@g.ucla.edu · ORCID: https://orcid.org/0009-0007-5230-9615 · Google Scholar: https://scholar.google.com/citations?user=24DcKqMAAAAJ
 
 ## Pages
 
 - [About](https://nozidoali.github.io/): bio and selected publications
-- [Publications](https://nozidoali.github.io/publications/): full publication list with BibTeX
+- [Publications](https://nozidoali.github.io/publications/): full publication list with BibTeX; selected papers have detail pages with abstracts under /publications/<slug>/
 - [Projects](https://nozidoali.github.io/projects/): research and course projects
 - [CV](https://nozidoali.github.io/cv/): full curriculum vitae ([PDF](https://nozidoali.github.io/assets/pdf/cv.pdf))
+
+## Machine-readable data
+
+- [research.json](https://nozidoali.github.io/research.json): structured list of all publications (title, authors, venue, DOI, arXiv, code, page)
+- [papers.bib](https://nozidoali.github.io/assets/bib/papers.bib): full BibTeX file
 
 ## Selected publications
 

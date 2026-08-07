@@ -1,0 +1,75 @@
+{% comment %}
+  Google Scholar (Highwire) meta tags + ScholarlyArticle JSON-LD for paper pages.
+  Driven by a `citation:` block in the page frontmatter:
+    citation:
+      title, authors (list), date (YYYY/MM or YYYY), conference | journal,
+      doi, arxiv, pdf_url, pages
+{% endcomment %}
+{% if page.citation %}
+  <meta name="citation_title" content="{{ page.citation.title }}">
+  {% for author in page.citation.authors %}
+    <meta name="citation_author" content="{{ author }}">
+  {% endfor %}
+  <meta name="citation_publication_date" content="{{ page.citation.date }}">
+  {% if page.citation.conference %}
+    <meta name="citation_conference_title" content="{{ page.citation.conference }}">
+  {% endif %}
+  {% if page.citation.journal %}
+    <meta name="citation_journal_title" content="{{ page.citation.journal }}">
+  {% endif %}
+  {% if page.citation.pages %}
+    <meta name="citation_pages" content="{{ page.citation.pages }}">
+  {% endif %}
+  {% if page.citation.doi %}
+    <meta name="citation_doi" content="{{ page.citation.doi }}">
+  {% endif %}
+  {% if page.citation.arxiv %}
+    <meta name="citation_arxiv_id" content="{{ page.citation.arxiv }}">
+  {% endif %}
+  {% if page.citation.pdf_url %}
+    <meta name="citation_pdf_url" content="{{ page.citation.pdf_url }}">
+  {% endif %}
+  <meta name="citation_abstract_html_url" content="{{ page.url | prepend: site.baseurl | prepend: site.url }}">
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ScholarlyArticle",
+      "name": {{ page.citation.title | jsonify }},
+      "headline": {{ page.citation.title | jsonify }},
+      "author": [
+        {% for author in page.citation.authors %}
+          {
+            "@type": "Person",
+            "name": {{ author | jsonify }}
+            {% if author == "Hanyu Wang" %}
+              ,
+              "@id": "https://orcid.org/0009-0007-5230-9615",
+              "sameAs": [
+                "https://orcid.org/0009-0007-5230-9615",
+                "https://scholar.google.com/citations?user=24DcKqMAAAAJ",
+                "https://github.com/Nozidoali",
+                "{{ site.url }}{{ site.baseurl }}/"
+              ]
+            {% endif %}
+          }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ],
+      "datePublished": {{ page.citation.date | jsonify }},
+      {% if page.description %}"abstract": {{ page.description | jsonify }},{% endif %}
+      {% assign article_sameas = "" | split: "," %}
+      {% if page.citation.doi %}
+        {% capture doi_url %}https://doi.org/{{ page.citation.doi }}{% endcapture %}
+        {% assign article_sameas = article_sameas | push: doi_url %}
+      {% endif %}
+      {% if page.citation.arxiv %}
+        {% capture arxiv_url %}https://arxiv.org/abs/{{ page.citation.arxiv }}{% endcapture %}
+        {% assign article_sameas = article_sameas | push: arxiv_url %}
+      {% endif %}
+      {% if article_sameas != blank %}"sameAs": {{ article_sameas | jsonify }},{% endif %}
+      {% if page.citation.conference %}"isPartOf": {{ page.citation.conference | jsonify }},{% endif %}
+      "url": "{{ page.url | prepend: site.baseurl | prepend: site.url }}",
+      "mainEntityOfPage": "{{ page.url | prepend: site.baseurl | prepend: site.url }}"
+    }
+  </script>
+{% endif %}
