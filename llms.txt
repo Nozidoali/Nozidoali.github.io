@@ -11,15 +11,15 @@ Contact: hanyuwang@g.ucla.edu · ORCID: https://orcid.org/0009-0007-5230-9615 ·
 
 ## Pages
 
-- [About](https://nozidoali.github.io/): bio and selected publications
-- [Publications](https://nozidoali.github.io/publications/): full publication list with BibTeX; selected papers have detail pages with abstracts under /publications/<slug>/
-- [Projects](https://nozidoali.github.io/projects/): research and course projects
-- [CV](https://nozidoali.github.io/cv/): full curriculum vitae ([PDF](https://nozidoali.github.io/assets/pdf/cv.pdf))
+- [About](https://hanyuwang.dev/): bio and selected publications
+- [Publications](https://hanyuwang.dev/publications/): full publication list with BibTeX; selected papers have detail pages with abstracts under /publications/<slug>/
+- [Projects](https://hanyuwang.dev/projects/): research and course projects
+- [CV](https://hanyuwang.dev/cv/): full curriculum vitae ([PDF](https://hanyuwang.dev/assets/pdf/cv.pdf))
 
 ## Machine-readable data
 
-- [research.json](https://nozidoali.github.io/research.json): structured list of all publications (title, authors, venue, DOI, arXiv, code, page)
-- [papers.bib](https://nozidoali.github.io/assets/bib/papers.bib): full BibTeX file
+- [research.json](https://hanyuwang.dev/research.json): structured list of all publications (title, authors, venue, DOI, arXiv, code, page)
+- [papers.bib](https://hanyuwang.dev/assets/bib/papers.bib): full BibTeX file
 
 ## Selected publications
 
