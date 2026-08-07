@@ -1,0 +1,97 @@
+cv:
+  name: Hanyu Wang
+  label: PhD Student, Computer Science
+  email: hanyuwang@g.ucla.edu
+  location: Los Angeles, CA, USA
+  image: ""
+  summary: PhD student at UCLA working on mathematical optimization problems in electronic design automation, including quantum circuit synthesis, logic synthesis, and LLM agents for hardware design.
+
+  social_networks:
+    - network: GitHub
+      username: Nozidoali
+
+  sections:
+    Education:
+      - institution: University of California, Los Angeles
+        location: Los Angeles, CA, USA
+        url: https://www.ucla.edu/
+        area: Computer Science
+        studyType: PhD
+        start_date: 2024-09
+        end_date: present
+        highlights:
+          - "Advisor: Prof. Jason Cong, VAST research group"
+          - "Interests: quantum computing, electronic design automation"
+
+      - institution: ETH Zurich
+        location: Zurich, Switzerland
+        url: https://ethz.ch/
+        area: Electrical Engineering and Information Technology
+        studyType: MSc
+        start_date: 2021-09
+        end_date: 2024-09
+
+      - institution: UM-SJTU Joint Institute, Shanghai Jiao Tong University
+        location: Shanghai, China
+        url: https://www.ji.sjtu.edu.cn/
+        area: Electrical and Computer Engineering
+        studyType: BEng
+        start_date: 2017-09
+        end_date: 2021-08
+
+    Experience:
+      - company: VAST Research Group, UCLA
+        position: Graduate Research Assistant
+        location: Los Angeles, CA, USA
+        start_date: 2024-09
+        end_date: present
+        highlights:
+          - "Advisor: Prof. Jason Cong"
+
+      - company: DYNAMO Research Group, ETH Zurich
+        position: Research Intern
+        location: Zurich, Switzerland
+        start_date: 2022-10
+        end_date: 2024-09
+        highlights:
+          - "Advisor: Prof. Lana Josipović"
+
+      - company: Integrated Systems Laboratory, EPFL
+        position: Research Intern
+        location: Lausanne, Switzerland
+        start_date: 2021-10
+        end_date: 2022-09
+        highlights:
+          - "Advisor: Prof. Giovanni De Micheli"
+
+      - company: Emerging Computing Technology Laboratory, Shanghai Jiao Tong University
+        position: Research Intern
+        location: Shanghai, China
+        start_date: 2019-06
+        end_date: 2021-09
+        highlights:
+          - "Advisor: Prof. Weikang Qian"
+
+      - company: Computer Systems Laboratory, Cornell University
+        position: Research Intern (Remote)
+        location: Ithaca, NY, USA
+        start_date: 2020-05
+        end_date: 2020-11
+        highlights:
+          - "Advisor: Prof. Zhiru Zhang"
+
+    Honors & Awards:
+      - label: Best Paper Award Nominations
+        details: DAC 2021, IWLS/ICCAD 2023 (MapBuf), DATE 2024 (VACSEM)
+      - label: Competition
+        details: 1st place, IWLS 2022 programming contest
+      - label: Competition
+        details: 1st place, Global Router Contest 2020, UW-Madison
+      - label: Scholarship
+        details: Sam and Daisy Wu Research Scholarship (2020), Liming Yu Scholarship (2018), John Wu & Jane Sun Excellence Scholarship (2017)
+
+    Teaching:
+      - label: ETH Zurich
+        details: "Teaching assistant for VLSI 1: HDL-based design for FPGAs (2022), VLSI 2: backend design (2023), and VLSI 4: measurement and testing of VLSI circuits (2023)"
+      - label: UM-SJTU Joint Institute
+        details: "Teaching assistant for VE475 Introduction to Cryptography, VP260 Honors Physics II, and VP160 Honors Physics I (2019)"
